@@ -18,10 +18,14 @@
 
                 Try
                     updates("UPDATE users SET password = '" & tbNewPassword.Text & "' WHERE password = '" & tbOldPassword.Text & "'")
-                    MessageBox.Show("New Password Created!")
-                    Dim MainForm As New login
+                    Me.Hide()
+
+                    Dim MainForm As New change
                     MainForm.Show()
-                    Me.Close()
+                    tbOldPassword.BorderColor = Color.DodgerBlue
+                    wrong.Text = ""
+                    tbNewPassword.Text = ""
+                    tbOldPassword.Text = ""
 
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
@@ -34,16 +38,9 @@
         End If
     End Sub
 
-    'Private Sub tbOldPassword_TextChanged(sender As Object, e As EventArgs) Handles tbOldPassword.TextChanged
-    '    tbOldPassword.BorderColor = Color.DodgerBlue
-    '    wrong.Text = ""
-    'End Sub
 
-    Private Sub wrong_Click(sender As Object, e As EventArgs) Handles wrong.Click
-
-    End Sub
-
-    Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub tbOldPassword_Click(sender As Object, e As EventArgs) Handles tbOldPassword.Click
+        tbOldPassword.BorderColor = Color.DodgerBlue
 
     End Sub
 End Class

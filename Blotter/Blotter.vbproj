@@ -123,6 +123,24 @@
       <DependentUpon>login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\change.Designer.vb">
+      <DependentUpon>change.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\change.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\exitMessage.Designer.vb">
+      <DependentUpon>exitMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\exitMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageBox\LoginSuccess.Designer.vb">
       <DependentUpon>LoginSuccess.vb</DependentUpon>
     </Compile>
@@ -157,10 +175,31 @@
     <Compile Include="Authentication\register.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserControls\blotter.Designer.vb">
+      <DependentUpon>blotter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\blotter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\blotterMenu.Designer.vb">
+      <DependentUpon>blotterMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\blotterMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Authentication\login.resx">
       <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\change.resx">
+      <DependentUpon>change.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\exitMessage.resx">
+      <DependentUpon>exitMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBox\LoginSuccess.resx">
       <DependentUpon>LoginSuccess.vb</DependentUpon>
@@ -176,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Authentication\register.resx">
       <DependentUpon>register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\blotter.resx">
+      <DependentUpon>blotter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\blotterMenu.resx">
+      <DependentUpon>blotterMenu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,9 @@ Public Class login
 
 
     Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
-        Me.Dispose()
+        Me.Close()
+
+        Application.Exit()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -27,14 +29,14 @@ Public Class login
                     tbUsername.BorderColor = Color.Tomato
                     tbPassword.BorderColor = Color.Tomato
                     MessageBox.Show("Invalid Username / Password", "Login Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    'tbUsername.Text = ""
-                    'tbPassword.Text = ""
+
 
 
                 Else
                     Dim MainForm As New ok
                     MainForm.Show()
-
+                    tbUsername.BorderColor = Color.DodgerBlue
+                    tbPassword.BorderColor = Color.DodgerBlue
                     'MessageBox.Show("Login Success", "Welcome to SAN ISIDRO BLOTTER SYSTEM!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     tbUsername.Clear()
                     tbPassword.Clear()
@@ -59,13 +61,13 @@ Public Class login
 
 
 
-    Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
-        tbUsername.BorderColor = Color.DodgerBlue
-    End Sub
+    'Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
+    '    tbUsername.BorderColor = Color.DodgerBlue
+    'End Sub
 
-    Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
-        tbPassword.BorderColor = Color.DodgerBlue
-    End Sub
+    'Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
+    '    tbPassword.BorderColor = Color.DodgerBlue
+    'End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         Me.Hide()
@@ -75,12 +77,16 @@ Public Class login
 
     End Sub
 
-    'Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
-    '    tbUsername.BorderColor = Color.DodgerBlue
-    'End Sub
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
+        tbUsername.BorderColor = Color.DodgerBlue
+    End Sub
 
 
-    'Private Sub tbPassword_Click(sender As Object, e As EventArgs) Handles tbPassword.Click
-    '    tbPassword.BorderColor = Color.DodgerBlue
-    'End Sub
+    Private Sub tbPassword_Click(sender As Object, e As EventArgs) Handles tbPassword.Click
+        tbPassword.BorderColor = Color.DodgerBlue
+    End Sub
 End Class

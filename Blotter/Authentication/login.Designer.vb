@@ -215,7 +215,7 @@ Partial Class login
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 40.2!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(15, 143)
+        Me.Label1.Location = New System.Drawing.Point(46, 141)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(367, 81)
         Me.Label1.TabIndex = 3
@@ -239,7 +239,7 @@ Partial Class login
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(39, 417)
+        Me.Label5.Location = New System.Drawing.Point(74, 417)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(314, 23)
         Me.Label5.TabIndex = 7
@@ -249,7 +249,7 @@ Partial Class login
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(29, 148)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(71, 148)
         Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(400, 265)
