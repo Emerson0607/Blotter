@@ -56,22 +56,25 @@ Public Class login
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+
+    'Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
+    '    tbUsername.BorderColor = Color.DodgerBlue
+    'End Sub
+
+    'Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
+    '    tbPassword.BorderColor = Color.DodgerBlue
+    'End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+        Me.Hide()
+        Dim MainForm As New register
+        MainForm.ShowDialog()
+        Me.Show()
 
     End Sub
 
-    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
 
-    End Sub
-
-    Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
-        tbUsername.BorderColor = Color.DodgerBlue
-
-
-
-    End Sub
-
-    Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
-        tbPassword.BorderColor = Color.DodgerBlue
     End Sub
 End Class

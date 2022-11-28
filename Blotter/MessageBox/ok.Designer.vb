@@ -27,8 +27,8 @@ Partial Class ok
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.btnOk = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -50,9 +50,10 @@ Partial Class ok
         Me.btnOk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnOk.ForeColor = System.Drawing.Color.White
-        Me.btnOk.Location = New System.Drawing.Point(85, 277)
+        Me.btnOk.Location = New System.Drawing.Point(113, 341)
+        Me.btnOk.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(103, 38)
+        Me.btnOk.Size = New System.Drawing.Size(137, 47)
         Me.btnOk.TabIndex = 3
         Me.btnOk.Text = "OK"
         '
@@ -62,34 +63,35 @@ Partial Class ok
         Me.Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(276, 146)
+        Me.Panel1.Size = New System.Drawing.Size(368, 180)
         Me.Panel1.TabIndex = 2
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(148, 64)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(71, 63)
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.BorderRadius = 15
         Me.Guna2Elipse1.TargetControl = Me
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(111, 52)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(53, 51)
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(58, 181)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(77, 223)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(158, 24)
+        Me.Label2.Size = New System.Drawing.Size(206, 32)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Login Success"
         '
@@ -97,23 +99,25 @@ Partial Class ok
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(17, 226)
+        Me.Label1.Location = New System.Drawing.Point(23, 278)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(247, 13)
+        Me.Label1.Size = New System.Drawing.Size(315, 17)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "WELCONE TO SAN ISIDRO BLOTTER SYSTEM!"
         '
         'ok
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(276, 355)
+        Me.ClientSize = New System.Drawing.Size(368, 437)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "ok"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ok"
