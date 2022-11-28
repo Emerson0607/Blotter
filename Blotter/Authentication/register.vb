@@ -14,7 +14,6 @@
             If dt.Rows.Count = 0 Then
                 tbOldPassword.BorderColor = Color.Tomato
                 wrong.Text = "Wrong Old Password!"
-                MessageBox.Show("Wrong Old Password", "failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
 
                 Try
@@ -44,5 +43,7 @@
 
     End Sub
 
+    Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

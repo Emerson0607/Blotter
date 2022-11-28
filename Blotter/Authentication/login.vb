@@ -30,6 +30,7 @@ Public Class login
                     'tbUsername.Text = ""
                     'tbPassword.Text = ""
 
+
                 Else
                     Dim MainForm As New ok
                     MainForm.Show()
@@ -58,13 +59,13 @@ Public Class login
 
 
 
-    'Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
-    '    tbUsername.BorderColor = Color.DodgerBlue
-    'End Sub
+    Private Sub tbUsername_TextChanged(sender As Object, e As EventArgs) Handles tbUsername.TextChanged
+        tbUsername.BorderColor = Color.DodgerBlue
+    End Sub
 
-    'Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
-    '    tbPassword.BorderColor = Color.DodgerBlue
-    'End Sub
+    Private Sub tbPassword_TextChanged(sender As Object, e As EventArgs) Handles tbPassword.TextChanged
+        tbPassword.BorderColor = Color.DodgerBlue
+    End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
         Me.Hide()
@@ -74,7 +75,12 @@ Public Class login
 
     End Sub
 
-    Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
+    'Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
+    '    tbUsername.BorderColor = Color.DodgerBlue
+    'End Sub
 
-    End Sub
+
+    'Private Sub tbPassword_Click(sender As Object, e As EventArgs) Handles tbPassword.Click
+    '    tbPassword.BorderColor = Color.DodgerBlue
+    'End Sub
 End Class
