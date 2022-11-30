@@ -50,9 +50,11 @@ Partial Class ok
         Me.btnOk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnOk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnOk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnOk.FillColor = System.Drawing.Color.DodgerBlue
-        Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnOk.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOk.ForeColor = System.Drawing.Color.White
+        Me.btnOk.HoverState.FillColor = System.Drawing.Color.Lime
+        Me.btnOk.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnOk.Location = New System.Drawing.Point(113, 341)
         Me.btnOk.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOk.Name = "btnOk"
@@ -62,7 +64,7 @@ Partial Class ok
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -75,7 +77,7 @@ Partial Class ok
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(148, 64)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(155, 64)
         Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(71, 63)

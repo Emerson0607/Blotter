@@ -22,7 +22,7 @@
 
                     Dim MainForm As New change
                     MainForm.Show()
-                    tbOldPassword.BorderColor = Color.DodgerBlue
+                    tbOldPassword.BorderColor = System.Drawing.Color.DodgerBlue
                     wrong.Text = ""
                     tbNewPassword.Text = ""
                     tbOldPassword.Text = ""
@@ -40,7 +40,11 @@
 
 
     Private Sub tbOldPassword_Click(sender As Object, e As EventArgs) Handles tbOldPassword.Click
-        tbOldPassword.BorderColor = Color.DodgerBlue
+        tbOldPassword.BorderColor = System.Drawing.Color.DodgerBlue
+
+    End Sub
+
+    Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

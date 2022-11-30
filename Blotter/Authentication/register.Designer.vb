@@ -214,7 +214,7 @@ Partial Class register
         Me.btnSubmit.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnSubmit.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnSubmit.HoverState.FillColor = System.Drawing.Color.RoyalBlue
+        Me.btnSubmit.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnSubmit.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnSubmit.Location = New System.Drawing.Point(89, 435)
         Me.btnSubmit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)

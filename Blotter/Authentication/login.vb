@@ -35,8 +35,8 @@ Public Class login
                 Else
                     Dim MainForm As New ok
                     MainForm.Show()
-                    tbUsername.BorderColor = Color.DodgerBlue
-                    tbPassword.BorderColor = Color.DodgerBlue
+                    tbUsername.BorderColor = System.Drawing.Color.DodgerBlue
+                    tbPassword.BorderColor = System.Drawing.Color.DodgerBlue
                     'MessageBox.Show("Login Success", "Welcome to SAN ISIDRO BLOTTER SYSTEM!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     tbUsername.Clear()
                     tbPassword.Clear()
@@ -82,11 +82,11 @@ Public Class login
     End Sub
 
     Private Sub tbUsername_Click(sender As Object, e As EventArgs) Handles tbUsername.Click
-        tbUsername.BorderColor = Color.DodgerBlue
+        tbUsername.BorderColor = System.Drawing.Color.DodgerBlue
     End Sub
 
 
     Private Sub tbPassword_Click(sender As Object, e As EventArgs) Handles tbPassword.Click
-        tbPassword.BorderColor = Color.DodgerBlue
+        tbPassword.BorderColor = System.Drawing.Color.DodgerBlue
     End Sub
 End Class

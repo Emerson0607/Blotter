@@ -1,9 +1,11 @@
 ﻿Public Class home
-    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs)
 
-    End Sub
+    Sub switchPanel(ByVal panel As Form)
+        homePanel.Controls.Clear()
+        panel.TopLevel = False
+        homePanel.Controls.Add(panel)
+        panel.Show()
 
-    Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
@@ -14,4 +16,15 @@
         MainForm.ShowDialog()
 
     End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        switchPanel(homepage2)
+
+    End Sub
+
+    Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        switchPanel(homepage2)
+    End Sub
+
+
 End Class

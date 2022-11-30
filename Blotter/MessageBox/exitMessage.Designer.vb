@@ -61,6 +61,7 @@ Partial Class exitMessage
         'btnYes
         '
         Me.btnYes.BorderRadius = 5
+        Me.btnYes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnYes.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnYes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnYes.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -79,6 +80,7 @@ Partial Class exitMessage
         'btnNo
         '
         Me.btnNo.BorderRadius = 5
+        Me.btnNo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNo.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnNo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))

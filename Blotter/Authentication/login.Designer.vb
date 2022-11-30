@@ -83,6 +83,7 @@ Partial Class login
         'Guna2CircleButton1
         '
         Me.Guna2CircleButton1.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -191,6 +192,7 @@ Partial Class login
         '
         Me.btnLogin.BackColor = System.Drawing.Color.Transparent
         Me.btnLogin.BorderRadius = 5
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -198,7 +200,7 @@ Partial Class login
         Me.btnLogin.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnLogin.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.RoyalBlue
+        Me.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnLogin.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnLogin.Location = New System.Drawing.Point(89, 417)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)

@@ -54,12 +54,17 @@ Module Module1
                 .columns(2).headertext = "Incident Location"
                 .columns(3).headertext = "Incident Date"
                 .columns(4).headertext = "Complainant"
-                .Columns(0).Width = 40
-                .Columns(1).Width = 70
-                .Columns(2).Width = 70
-                .Columns(3).Width = 70
-                .Columns(4).Width = 100
+                .Columns(0).Width = 20
+                .Columns(1).Width = 40
+                .Columns(2).Width = 40
+                .Columns(3).Width = 40
+                .Columns(4).Width = 190
+
+
+
             End With
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
