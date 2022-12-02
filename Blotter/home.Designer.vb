@@ -29,10 +29,10 @@ Partial Class home
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnAgreement = New Guna.UI2.WinForms.Guna2Button()
         Me.btnBlotter = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnBack = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,34 +90,34 @@ Partial Class home
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(570, 330)
+        Me.Label3.Location = New System.Drawing.Point(595, 322)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(383, 28)
+        Me.Label3.Size = New System.Drawing.Size(343, 32)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "SAN ISIDRO BLOTTER SYSTEM"
         '
-        'Guna2Button2
+        'btnAgreement
         '
-        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(107, Byte), Integer))
-        Me.Guna2Button2.BorderRadius = 10
-        Me.Guna2Button2.BorderThickness = 2
-        Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.DodgerBlue
-        Me.Guna2Button2.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(800, 447)
-        Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(161, 59)
-        Me.Guna2Button2.TabIndex = 49
-        Me.Guna2Button2.Text = "Agreement"
+        Me.btnAgreement.BackColor = System.Drawing.Color.Transparent
+        Me.btnAgreement.BorderColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(107, Byte), Integer))
+        Me.btnAgreement.BorderRadius = 10
+        Me.btnAgreement.BorderThickness = 2
+        Me.btnAgreement.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAgreement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAgreement.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAgreement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAgreement.FillColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.btnAgreement.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgreement.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAgreement.HoverState.FillColor = System.Drawing.Color.DodgerBlue
+        Me.btnAgreement.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnAgreement.Location = New System.Drawing.Point(800, 447)
+        Me.btnAgreement.Name = "btnAgreement"
+        Me.btnAgreement.Size = New System.Drawing.Size(161, 59)
+        Me.btnAgreement.TabIndex = 49
+        Me.btnAgreement.Text = "Agreement"
         '
         'btnBlotter
         '
@@ -130,7 +130,7 @@ Partial Class home
         Me.btnBlotter.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnBlotter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnBlotter.FillColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.btnBlotter.Font = New System.Drawing.Font("Segoe UI Semibold", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.btnBlotter.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBlotter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBlotter.HoverState.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnBlotter.HoverState.ForeColor = System.Drawing.Color.White
@@ -150,21 +150,21 @@ Partial Class home
         Me.Guna2PictureBox1.TabIndex = 51
         Me.Guna2PictureBox1.TabStop = False
         '
-        'btnBack
+        'btnLogout
         '
-        Me.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnBack.FillColor = System.Drawing.Color.DodgerBlue
-        Me.btnBack.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnBack.ForeColor = System.Drawing.Color.White
-        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
-        Me.btnBack.Location = New System.Drawing.Point(1248, 2)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.PressedColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.btnBack.Size = New System.Drawing.Size(44, 45)
-        Me.btnBack.TabIndex = 63
+        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogout.FillColor = System.Drawing.Color.DodgerBlue
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Image = CType(resources.GetObject("btnLogout.Image"), System.Drawing.Image)
+        Me.btnLogout.Location = New System.Drawing.Point(1248, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.PressedColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnLogout.Size = New System.Drawing.Size(44, 45)
+        Me.btnLogout.TabIndex = 63
         '
         'home
         '
@@ -172,9 +172,9 @@ Partial Class home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(1300, 800)
-        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Guna2Button2)
+        Me.Controls.Add(Me.btnAgreement)
         Me.Controls.Add(Me.btnBlotter)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -196,8 +196,8 @@ Partial Class home
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnAgreement As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnBlotter As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
 End Class
