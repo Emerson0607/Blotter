@@ -8,7 +8,7 @@ Public Class blotterMenu
     Private Sub DataGridView1_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs)
         Dim i As Integer
 
-        For i = -1 To DataGridView1.Columns.Count
+        For i = -1 To dtg1.Columns.Count
             If e.ColumnIndex = i And e.RowIndex = -1 Then
                 e.AdvancedBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
             End If
@@ -17,17 +17,19 @@ Public Class blotterMenu
     End Sub
     Private Sub blotterMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", DataGridView1)
-        Dim FontSize As New Font(DataGridView1.ColumnHeadersDefaultCellStyle.Font.Size, 15)
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle.Font = FontSize
+        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", dtg1)
+        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", dtg1)
 
-        Dim FontSize2 As New Font(DataGridView1.RowsDefaultCellStyle.Font.Size, 11)
-        Me.DataGridView1.RowsDefaultCellStyle.Font = FontSize2
-        Dim FontSize3 As New Font(DataGridView1.AlternatingRowsDefaultCellStyle.Font.Size, 11)
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle.Font = FontSize3
+        ''Dim FontSize As New Font(DataGridView1.ColumnHeadersDefaultCellStyle.Font.Size, 15)
+        ''Me.DataGridView1.ColumnHeadersDefaultCellStyle.Font = FontSize
 
-        Dim FontBold As New Font(DataGridView1.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold)
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle.Font = FontBold
+        ''Dim FontSize2 As New Font(DataGridView1.RowsDefaultCellStyle.Font.Size, 11)
+        ''Me.DataGridView1.RowsDefaultCellStyle.Font = FontSize2
+        ''Dim FontSize3 As New Font(DataGridView1.AlternatingRowsDefaultCellStyle.Font.Size, 11)
+        ''Me.DataGridView1.AlternatingRowsDefaultCellStyle.Font = FontSize3
+
+        'Dim FontBold As New Font(DataGridView1.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold)
+        'Me.DataGridView1.ColumnHeadersDefaultCellStyle.Font = FontBold
 
 
         Dim dbConn = New MySqlConnection
@@ -71,8 +73,7 @@ Public Class blotterMenu
     End Sub
 
     Private Sub id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles id.SelectedIndexChanged
-        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id where incidentBlotter.id = '" & id.SelectedItem & "'", DataGridView1)
-
+        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id where incidentBlotter.id = '" & id.SelectedItem & "'", dtg1)
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -87,7 +88,7 @@ Public Class blotterMenu
             MessageBox.Show("Deleted Successfully")
             Me.id.Items.Clear()
 
-            reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", DataGridView1)
+            reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", dtg1)
 
 
         End If
@@ -115,5 +116,13 @@ Public Class blotterMenu
         '    MainForm.ShowDialog()
         '    Me.Show()
         'End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub dtg1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtg1.CellContentClick
+
     End Sub
 End Class

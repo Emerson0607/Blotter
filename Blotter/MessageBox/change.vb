@@ -4,4 +4,8 @@
         Dim MainForm As New login
         MainForm.ShowDialog()
     End Sub
+
+    Private Sub change_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

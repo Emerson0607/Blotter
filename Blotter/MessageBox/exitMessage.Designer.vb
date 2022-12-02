@@ -28,6 +28,7 @@ Partial Class exitMessage
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnYes = New Guna.UI2.WinForms.Guna2Button()
         Me.btnNo = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -39,11 +40,11 @@ Partial Class exitMessage
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(36, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 40)
+        Me.Label1.Size = New System.Drawing.Size(74, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Exit"
         '
@@ -60,6 +61,7 @@ Partial Class exitMessage
         '
         'btnYes
         '
+        Me.btnYes.BackColor = System.Drawing.Color.Transparent
         Me.btnYes.BorderRadius = 5
         Me.btnYes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnYes.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -96,6 +98,11 @@ Partial Class exitMessage
         Me.btnNo.TabIndex = 3
         Me.btnNo.Text = "No"
         '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.BorderRadius = 15
+        Me.Guna2Elipse1.TargetControl = Me
+        '
         'exitMessage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -120,4 +127,5 @@ Partial Class exitMessage
     Friend WithEvents Label1 As Label
     Friend WithEvents btnNo As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnYes As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
 End Class

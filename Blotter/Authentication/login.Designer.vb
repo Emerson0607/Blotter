@@ -48,8 +48,11 @@ Partial Class login
         '
         'Guna2BorderlessForm1
         '
+        Me.Guna2BorderlessForm1.AnimateWindow = True
+        Me.Guna2BorderlessForm1.AnimationInterval = 250
         Me.Guna2BorderlessForm1.ContainerControl = Me
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2BorderlessForm1.ResizeForm = False
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
         'Panel1

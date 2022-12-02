@@ -39,8 +39,11 @@ Partial Class home
         '
         'Guna2BorderlessForm1
         '
+        Me.Guna2BorderlessForm1.AnimateWindow = True
+        Me.Guna2BorderlessForm1.BorderRadius = 15
         Me.Guna2BorderlessForm1.ContainerControl = Me
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2BorderlessForm1.ResizeForm = False
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
         'Guna2CircleButton1
@@ -121,7 +124,7 @@ Partial Class home
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(569, 261)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(398, 28)
+        Me.Label3.Size = New System.Drawing.Size(383, 28)
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "SAN ISIDRO BLOTTER SYSTEM"
         '
@@ -169,12 +172,13 @@ Partial Class home
         '
         'btnLogout
         '
+        Me.btnLogout.BackColor = System.Drawing.Color.DodgerBlue
         Me.btnLogout.BorderRadius = 15
         Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnLogout.FillColor = System.Drawing.SystemColors.Highlight
+        Me.btnLogout.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnLogout.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
         Me.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))

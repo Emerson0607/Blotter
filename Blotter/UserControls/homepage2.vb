@@ -13,8 +13,12 @@
     Private Sub btnBlotter_Click(sender As Object, e As EventArgs) Handles btnBlotter.Click
 
         Me.Hide()
-        Dim MainForm As New BlotterMenu
+        Dim MainForm As New blotterMenu
         MainForm.ShowDialog()
         Me.Show()
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+
     End Sub
 End Class

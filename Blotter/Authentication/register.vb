@@ -12,14 +12,16 @@
 
             reloadData("SELECT * FROM users WHERE password = '" & tbOldPassword.Text & "'")
             If dt.Rows.Count = 0 Then
-                tbOldPassword.BorderColor = Color.Tomato
+                tbOldPassword.BorderColor = System.Drawing.Color.Tomato
                 wrong.Text = "Wrong Old Password!"
             Else
 
                 Try
                     updates("UPDATE users SET password = '" & tbNewPassword.Text & "' WHERE password = '" & tbOldPassword.Text & "'")
-                    Me.Hide()
+                    'Me.Hide()
 
+                    'Dim MainForm As New change
+                    'MainForm.Show()
                     Dim MainForm As New change
                     MainForm.Show()
                     tbOldPassword.BorderColor = System.Drawing.Color.DodgerBlue
@@ -44,7 +46,4 @@
 
     End Sub
 
-    Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

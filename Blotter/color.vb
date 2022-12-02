@@ -1,5 +1,6 @@
 ﻿Public Class color
-    Friend Shared Function Tomato() As Drawing.Color
-        Throw New NotImplementedException()
-    End Function
+
+    Private Sub color_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

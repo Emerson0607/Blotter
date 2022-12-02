@@ -1,13 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class login
 
-
-    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
-        Me.Close()
-
-        Application.Exit()
-    End Sub
-
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If String.IsNullOrWhiteSpace(tbPassword.Text) Or String.IsNullOrWhiteSpace(tbUsername.Text) Then
             MessageBox.Show("Enter complete data first!")
@@ -26,8 +19,8 @@ Public Class login
                 da.Dispose()
 
                 If dt.Rows.Count = 0 Then
-                    tbUsername.BorderColor = Color.Tomato
-                    tbPassword.BorderColor = Color.Tomato
+                    tbUsername.BorderColor = System.Drawing.Color.Tomato
+                    tbPassword.BorderColor = System.Drawing.Color.Tomato
                     MessageBox.Show("Invalid Username / Password", "Login Failed!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
 
@@ -88,5 +81,11 @@ Public Class login
 
     Private Sub tbPassword_Click(sender As Object, e As EventArgs) Handles tbPassword.Click
         tbPassword.BorderColor = System.Drawing.Color.DodgerBlue
+    End Sub
+
+    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
+        Me.Close()
+
+        Application.Exit()
     End Sub
 End Class

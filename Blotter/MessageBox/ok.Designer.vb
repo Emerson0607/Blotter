@@ -37,9 +37,11 @@ Partial Class ok
         '
         'Guna2BorderlessForm1
         '
+        Me.Guna2BorderlessForm1.AnimationInterval = 50
         Me.Guna2BorderlessForm1.BorderRadius = 10
         Me.Guna2BorderlessForm1.ContainerControl = Me
         Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2BorderlessForm1.ResizeForm = False
         Me.Guna2BorderlessForm1.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
@@ -50,10 +52,10 @@ Partial Class ok
         Me.btnOk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnOk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnOk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnOk.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnOk.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOk.ForeColor = System.Drawing.Color.White
-        Me.btnOk.HoverState.FillColor = System.Drawing.Color.Lime
+        Me.btnOk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnOk.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnOk.Location = New System.Drawing.Point(113, 341)
         Me.btnOk.Margin = New System.Windows.Forms.Padding(4)
@@ -64,7 +66,7 @@ Partial Class ok
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -92,22 +94,23 @@ Partial Class ok
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(82, 209)
+        Me.Label2.Location = New System.Drawing.Point(93, 207)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(206, 32)
+        Me.Label2.Size = New System.Drawing.Size(192, 38)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Login Success"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(23, 278)
+        Me.Label1.Location = New System.Drawing.Point(37, 270)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(316, 17)
+        Me.Label1.Size = New System.Drawing.Size(290, 19)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "WELCOME TO SAN ISIDRO BLOTTER SYSTEM!"
         '
