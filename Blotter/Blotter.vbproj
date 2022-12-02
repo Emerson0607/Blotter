@@ -147,10 +147,28 @@
       <DependentUpon>login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BlotterSide\createBlotter.Designer.vb">
+      <DependentUpon>createBlotter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlotterSide\createBlotter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BlotterSide\blotterMenu.Designer.vb">
       <DependentUpon>blotterMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="BlotterSide\blotterMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlotterSide\editBlotter.Designer.vb">
+      <DependentUpon>editBlotter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlotterSide\editBlotter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlotterSide\viewBlotter.Designer.vb">
+      <DependentUpon>viewBlotter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BlotterSide\viewBlotter.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="color.Designer.vb">
@@ -212,6 +230,7 @@
     <Compile Include="UserControls\homepage2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="validationForInteger.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AgreementSide\agreementMenu.resx">
@@ -220,8 +239,17 @@
     <EmbeddedResource Include="Authentication\login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BlotterSide\createBlotter.resx">
+      <DependentUpon>createBlotter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlotterSide\blotterMenu.resx">
       <DependentUpon>blotterMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlotterSide\editBlotter.resx">
+      <DependentUpon>editBlotter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlotterSide\viewBlotter.resx">
+      <DependentUpon>viewBlotter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="color.resx">
       <DependentUpon>color.vb</DependentUpon>

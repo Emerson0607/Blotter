@@ -96,26 +96,26 @@ Public Class blotterMenu
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         selectedID = id.SelectedItem
-        'If String.IsNullOrWhiteSpace(selectedID) Then
-        '    MessageBox.Show("Select ID to edit!")
-        'Else
-        '    Me.Hide()
-        '    Dim MainForm As New editBlotter
-        '    MainForm.ShowDialog()
-        '    Me.Show()
-        'End If
+        If String.IsNullOrWhiteSpace(selectedID) Then
+            MessageBox.Show("Select ID to edit!")
+        Else
+            Me.Hide()
+            Dim MainForm As New editBlotter
+            MainForm.ShowDialog()
+            Me.Show()
+        End If
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         selectedID = id.SelectedItem
-        'If String.IsNullOrWhiteSpace(selectedID) Then
-        '    MessageBox.Show("Select ID to view!")
-        'Else
-        '    Me.Hide()
-        '    Dim MainForm As New viewBlotter
-        '    MainForm.ShowDialog()
-        '    Me.Show()
-        'End If
+        If String.IsNullOrWhiteSpace(selectedID) Then
+            MessageBox.Show("Select ID to view!")
+        Else
+            Me.Hide()
+            Dim MainForm As New viewBlotter
+            MainForm.ShowDialog()
+            Me.Show()
+        End If
     End Sub
 
 
@@ -138,5 +138,12 @@ Public Class blotterMenu
                & "%' Or incidentBlotter.incidentType LIKE '%" & search.Text & "%' Or incidentBlotter.incidentLocation LIKE '%" & search.Text _
                & "%' Or  incidentBlotter.incidentDT LIKE '%" & search.Text & "%' Or complainantBlotter.fullname LIKE '%" & search.Text & "%'", dtg1)
 
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Me.Hide()
+        Dim MainForm As New createBlotter
+        MainForm.ShowDialog()
+        Me.Show()
     End Sub
 End Class
