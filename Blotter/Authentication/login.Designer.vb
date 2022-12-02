@@ -27,7 +27,6 @@ Partial Class login
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,6 +39,7 @@ Partial Class login
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.btnBack = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1.SuspendLayout()
         CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,8 +57,8 @@ Partial Class login
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnBack)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Guna2CircleButton1)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -82,26 +82,6 @@ Partial Class login
         Me.Label6.Size = New System.Drawing.Size(123, 16)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Change Password"
-        '
-        'Guna2CircleButton1
-        '
-        Me.Guna2CircleButton1.BorderColor = System.Drawing.Color.Transparent
-        Me.Guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2CircleButton1.FillColor = System.Drawing.Color.DodgerBlue
-        Me.Guna2CircleButton1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!)
-        Me.Guna2CircleButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2CircleButton1.HoverState.FillColor = System.Drawing.Color.Tomato
-        Me.Guna2CircleButton1.Location = New System.Drawing.Point(453, 4)
-        Me.Guna2CircleButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Guna2CircleButton1.Name = "Guna2CircleButton1"
-        Me.Guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CircleButton1.Size = New System.Drawing.Size(40, 37)
-        Me.Guna2CircleButton1.TabIndex = 8
-        Me.Guna2CircleButton1.Text = "X"
         '
         'Label4
         '
@@ -279,6 +259,22 @@ Partial Class login
         Me.Guna2CirclePictureBox1.TabIndex = 1
         Me.Guna2CirclePictureBox1.TabStop = False
         '
+        'btnBack
+        '
+        Me.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBack.FillColor = System.Drawing.Color.White
+        Me.btnBack.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnBack.ForeColor = System.Drawing.Color.White
+        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.Location = New System.Drawing.Point(450, 3)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.PressedColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnBack.Size = New System.Drawing.Size(44, 45)
+        Me.btnBack.TabIndex = 62
+        '
         'login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -317,9 +313,9 @@ Partial Class login
     Friend WithEvents Label4 As Label
     Friend WithEvents Guna2CirclePictureBox2 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
 End Class

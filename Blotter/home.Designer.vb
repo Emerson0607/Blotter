@@ -26,15 +26,15 @@ Partial Class home
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2CircleButton1 = New Guna.UI2.WinForms.Guna2CircleButton()
-        Me.Guna2Shapes1 = New Guna.UI2.WinForms.Guna2Shapes()
-        Me.Guna2Shapes2 = New Guna.UI2.WinForms.Guna2Shapes()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.btnBlotter = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnLogout = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnBack = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -66,40 +66,10 @@ Partial Class home
         Me.Guna2CircleButton1.TabIndex = 42
         Me.Guna2CircleButton1.Text = "X"
         '
-        'Guna2Shapes1
-        '
-        Me.Guna2Shapes1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Shapes1.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2Shapes1.FillColor = System.Drawing.Color.White
-        Me.Guna2Shapes1.Location = New System.Drawing.Point(-89, -237)
-        Me.Guna2Shapes1.Name = "Guna2Shapes1"
-        Me.Guna2Shapes1.PolygonSides = 4
-        Me.Guna2Shapes1.PolygonSkip = 1
-        Me.Guna2Shapes1.Rotate = 0!
-        Me.Guna2Shapes1.Size = New System.Drawing.Size(639, 1276)
-        Me.Guna2Shapes1.TabIndex = 43
-        Me.Guna2Shapes1.Text = "Guna2Shapes1"
-        Me.Guna2Shapes1.UseTransparentBackground = True
-        Me.Guna2Shapes1.Zoom = 80
-        '
-        'Guna2Shapes2
-        '
-        Me.Guna2Shapes2.FillColor = System.Drawing.Color.White
-        Me.Guna2Shapes2.Location = New System.Drawing.Point(-288, -257)
-        Me.Guna2Shapes2.Name = "Guna2Shapes2"
-        Me.Guna2Shapes2.PolygonSides = 4
-        Me.Guna2Shapes2.PolygonSkip = 1
-        Me.Guna2Shapes2.Rotate = 0!
-        Me.Guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rectangle
-        Me.Guna2Shapes2.Size = New System.Drawing.Size(635, 1276)
-        Me.Guna2Shapes2.TabIndex = 44
-        Me.Guna2Shapes2.Text = "Guna2Shapes2"
-        Me.Guna2Shapes2.Zoom = 80
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(37, 237)
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 211)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(361, 342)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -111,7 +81,7 @@ Partial Class home
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(547, 148)
+        Me.Label1.Location = New System.Drawing.Point(548, 217)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(432, 93)
         Me.Label1.TabIndex = 46
@@ -122,7 +92,7 @@ Partial Class home
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(569, 261)
+        Me.Label3.Location = New System.Drawing.Point(570, 330)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(383, 28)
         Me.Label3.TabIndex = 47
@@ -143,7 +113,7 @@ Partial Class home
         Me.Guna2Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Guna2Button2.HoverState.FillColor = System.Drawing.Color.DodgerBlue
         Me.Guna2Button2.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(799, 378)
+        Me.Guna2Button2.Location = New System.Drawing.Point(800, 447)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(161, 59)
         Me.Guna2Button2.TabIndex = 49
@@ -164,33 +134,37 @@ Partial Class home
         Me.btnBlotter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBlotter.HoverState.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnBlotter.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnBlotter.Location = New System.Drawing.Point(574, 378)
+        Me.btnBlotter.Location = New System.Drawing.Point(575, 447)
         Me.btnBlotter.Name = "btnBlotter"
         Me.btnBlotter.Size = New System.Drawing.Size(161, 59)
         Me.btnBlotter.TabIndex = 48
         Me.btnBlotter.Text = "Blotter"
         '
-        'btnLogout
+        'Guna2PictureBox1
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.DodgerBlue
-        Me.btnLogout.BorderRadius = 15
-        Me.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnLogout.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnLogout.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnLogout.HoverState.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Image = CType(resources.GetObject("btnLogout.Image"), System.Drawing.Image)
-        Me.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnLogout.Location = New System.Drawing.Point(1117, 21)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(145, 31)
-        Me.btnLogout.TabIndex = 50
-        Me.btnLogout.Text = "Logout"
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-78, -124)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(619, 940)
+        Me.Guna2PictureBox1.TabIndex = 51
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'btnBack
+        '
+        Me.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBack.FillColor = System.Drawing.Color.DodgerBlue
+        Me.btnBack.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnBack.ForeColor = System.Drawing.Color.White
+        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.Location = New System.Drawing.Point(1248, 2)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.PressedColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.btnBack.Size = New System.Drawing.Size(44, 45)
+        Me.btnBack.TabIndex = 63
         '
         'home
         '
@@ -198,20 +172,20 @@ Partial Class home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(1300, 800)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Guna2Button2)
         Me.Controls.Add(Me.btnBlotter)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Guna2CircleButton1)
-        Me.Controls.Add(Me.Guna2Shapes1)
-        Me.Controls.Add(Me.Guna2Shapes2)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "home"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "home"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -219,12 +193,11 @@ Partial Class home
 
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2CircleButton1 As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents Guna2Shapes2 As Guna.UI2.WinForms.Guna2Shapes
-    Friend WithEvents Guna2Shapes1 As Guna.UI2.WinForms.Guna2Shapes
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnBlotter As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btnBack As Guna.UI2.WinForms.Guna2Button
 End Class

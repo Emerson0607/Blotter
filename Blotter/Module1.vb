@@ -43,8 +43,6 @@ Module Module1
             End With
             da.SelectCommand = cmd
             da.Fill(dt)
-
-
             dtg.datasource = dt
 
             With dtg
@@ -59,18 +57,12 @@ Module Module1
                 .Columns(2).Width = 40
                 .Columns(3).Width = 40
                 .Columns(4).Width = 190
-
-
-
             End With
-
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
             strcon.Close()
             da.Dispose()
-
         End Try
     End Sub
 
@@ -84,8 +76,6 @@ Module Module1
             End With
             da.SelectCommand = cmd
             da.Fill(dt)
-
-
             dtg.datasource = dt
 
             With dtg
@@ -96,12 +86,12 @@ Module Module1
                 .columns(3).headertext = "Victim"
                 .columns(4).headertext = "Suspect"
                 .columns(5).headertext = "Witness"
-                .Columns(0).Width = 40
-                .Columns(1).Width = 60
-                .Columns(2).Width = 60
-                .Columns(3).Width = 50
-                .Columns(4).Width = 50
-                .Columns(5).Width = 90
+                .Columns(0).Width = 25
+                .Columns(1).Width = 45
+                .Columns(2).Width = 45
+                .Columns(3).Width = 45
+                .Columns(4).Width = 45
+                .Columns(5).Width = 150
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -165,5 +155,4 @@ Module Module1
             End If
         End Try
     End Sub
-
 End Module

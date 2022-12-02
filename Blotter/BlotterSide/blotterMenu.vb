@@ -118,11 +118,25 @@ Public Class blotterMenu
         'End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Me.Hide()
+        Dim MainForm As New home
+        MainForm.ShowDialog()
 
     End Sub
+    Private Sub search_TextChanged(sender As Object, e As EventArgs)
+        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id where incidentBlotter.id LIKE '%" & search.Text _
+               & "%' Or incidentBlotter.incidentType LIKE '%" & search.Text & "%' Or incidentBlotter.incidentLocation LIKE '%" & search.Text _
+               & "%' Or  incidentBlotter.incidentDT LIKE '%" & search.Text & "%' Or complainantBlotter.fullname LIKE '%" & search.Text & "%'", dtg1)
+    End Sub
 
-    Private Sub dtg1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtg1.CellContentClick
+
+    Private Sub search_TextChanged_2(sender As Object, e As EventArgs) Handles search.TextChanged
+        reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id where incidentBlotter.id LIKE '%" & search.Text _
+               & "%' Or incidentBlotter.incidentType LIKE '%" & search.Text & "%' Or incidentBlotter.incidentLocation LIKE '%" & search.Text _
+               & "%' Or  incidentBlotter.incidentDT LIKE '%" & search.Text & "%' Or complainantBlotter.fullname LIKE '%" & search.Text & "%'", dtg1)
 
     End Sub
 End Class

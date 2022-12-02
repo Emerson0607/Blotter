@@ -134,6 +134,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgreementSide\agreementMenu.Designer.vb">
+      <DependentUpon>agreementMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSide\agreementMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Authentication\login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -141,10 +147,10 @@
       <DependentUpon>login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="blotterMenu.Designer.vb">
+    <Compile Include="BlotterSide\blotterMenu.Designer.vb">
       <DependentUpon>blotterMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="blotterMenu.vb">
+    <Compile Include="BlotterSide\blotterMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="color.Designer.vb">
@@ -208,10 +214,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgreementSide\agreementMenu.resx">
+      <DependentUpon>agreementMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authentication\login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="blotterMenu.resx">
+    <EmbeddedResource Include="BlotterSide\blotterMenu.resx">
       <DependentUpon>blotterMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="color.resx">

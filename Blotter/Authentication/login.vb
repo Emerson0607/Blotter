@@ -7,6 +7,7 @@ Public Class login
         Else
             strcon.Open()
 
+
             Try
                 cmd.Connection = strcon
                 cmd.CommandText = "SELECT * FROM users WHERE username = @user and password = @pass;"
@@ -83,7 +84,7 @@ Public Class login
         tbPassword.BorderColor = System.Drawing.Color.DodgerBlue
     End Sub
 
-    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
 
         Application.Exit()

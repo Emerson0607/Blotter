@@ -1,8 +1,4 @@
 ﻿Public Class register
-    Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
-        Me.Dispose()
-
-    End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
@@ -46,4 +42,8 @@
 
     End Sub
 
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Me.Close()
+        Application.Exit()
+    End Sub
 End Class

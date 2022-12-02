@@ -121,6 +121,14 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0z0KwCAMBeA49EQeQD1Pf+zQg9TzFto+IYF2T5zyQcBkeAFRcm64kHPeUQv3qkJKqSH8QV0xxonnKr7h
+        N84rz1X8wkspG89VmIYTQg+z8M58AfRnecoSVOW5qjFLLJ+pMP1ool9XRc3cO2eO6AUgAD8rWO1qTAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAIVJREFUSEvl
@@ -167,7 +175,7 @@
         8df+QGefu2mznOCWY8b5HDly5MiRI0eOHBOgoeF/15ckjNhjLK8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAOFJREFUaEPt
         1kFqw0AQRFGdyziXj8m55AG9fXUWMoWZB9pVo7+cY9u27Xuc5/m3vuRl3kdgZN5HX2TeR19k3kdfZN5H
