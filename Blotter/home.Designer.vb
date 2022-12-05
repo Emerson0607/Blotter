@@ -69,7 +69,7 @@ Partial Class home
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 211)
+        Me.PictureBox1.Location = New System.Drawing.Point(81, 245)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(361, 342)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -81,7 +81,7 @@ Partial Class home
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(548, 217)
+        Me.Label1.Location = New System.Drawing.Point(692, 245)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(432, 93)
         Me.Label1.TabIndex = 46
@@ -92,7 +92,7 @@ Partial Class home
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(595, 322)
+        Me.Label3.Location = New System.Drawing.Point(739, 350)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(343, 32)
         Me.Label3.TabIndex = 47
@@ -113,7 +113,7 @@ Partial Class home
         Me.btnAgreement.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnAgreement.HoverState.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnAgreement.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnAgreement.Location = New System.Drawing.Point(800, 447)
+        Me.btnAgreement.Location = New System.Drawing.Point(944, 475)
         Me.btnAgreement.Name = "btnAgreement"
         Me.btnAgreement.Size = New System.Drawing.Size(161, 59)
         Me.btnAgreement.TabIndex = 49
@@ -134,7 +134,7 @@ Partial Class home
         Me.btnBlotter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnBlotter.HoverState.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnBlotter.HoverState.ForeColor = System.Drawing.Color.White
-        Me.btnBlotter.Location = New System.Drawing.Point(575, 447)
+        Me.btnBlotter.Location = New System.Drawing.Point(719, 475)
         Me.btnBlotter.Name = "btnBlotter"
         Me.btnBlotter.Size = New System.Drawing.Size(161, 59)
         Me.btnBlotter.TabIndex = 48
@@ -144,9 +144,9 @@ Partial Class home
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-78, -124)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-9, -95)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(619, 940)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(603, 940)
         Me.Guna2PictureBox1.TabIndex = 51
         Me.Guna2PictureBox1.TabStop = False
         '
@@ -172,8 +172,8 @@ Partial Class home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(1300, 800)
-        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnAgreement)
         Me.Controls.Add(Me.btnBlotter)
         Me.Controls.Add(Me.Label3)

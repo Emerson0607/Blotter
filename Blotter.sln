@@ -5,16 +5,20 @@ VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Blotter", "Blotter\Blotter.vbproj", "{5AC385C4-C488-482F-B754-786B8DACB258}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{5F1CC491-556D-4963-852F-485563379E4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5AC385C4-C488-482F-B754-786B8DACB258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AC385C4-C488-482F-B754-786B8DACB258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC385C4-C488-482F-B754-786B8DACB258}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC385C4-C488-482F-B754-786B8DACB258}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{5AC385C4-C488-482F-B754-786B8DACB258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AC385C4-C488-482F-B754-786B8DACB258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1CC491-556D-4963-852F-485563379E4D}.Debug|Any CPU.ActiveCfg = Debug
+		{5F1CC491-556D-4963-852F-485563379E4D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

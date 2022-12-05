@@ -14,7 +14,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Emerson Martinez\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,10 +25,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ProductName>BLOTTER SYSTEM</ProductName>
+    <PublisherName>GROUP 1</PublisherName>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -64,6 +68,27 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CB010B993FEDF79034BF09281E199E6E464564B2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Blotter_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-play-graph-report-16.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Blotter_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -201,6 +226,42 @@
     <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MessageBox\added.Designer.vb">
+      <DependentUpon>added.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\added.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\agreeAdded.Designer.vb">
+      <DependentUpon>agreeAdded.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\agreeAdded.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\agreeDelete.Designer.vb">
+      <DependentUpon>agreeDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\agreeDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\agreeUpdated.Designer.vb">
+      <DependentUpon>agreeUpdated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\agreeUpdated.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\blotterDelete.Designer.vb">
+      <DependentUpon>blotterDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\blotterDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\blotterUpdated.Designer.vb">
+      <DependentUpon>blotterUpdated.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\blotterUpdated.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageBox\change.Designer.vb">
       <DependentUpon>change.vb</DependentUpon>
     </Compile>
@@ -284,6 +345,24 @@
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\added.resx">
+      <DependentUpon>added.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\agreeAdded.resx">
+      <DependentUpon>agreeAdded.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\agreeDelete.resx">
+      <DependentUpon>agreeDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\agreeUpdated.resx">
+      <DependentUpon>agreeUpdated.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\blotterDelete.resx">
+      <DependentUpon>blotterDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\blotterUpdated.resx">
+      <DependentUpon>blotterUpdated.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageBox\change.resx">
       <DependentUpon>change.vb</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +386,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Blotter_1_TemporaryKey.pfx" />
+    <None Include="Blotter_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -331,6 +412,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-play-graph-report-16.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

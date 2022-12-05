@@ -32,9 +32,11 @@ Public Class editBlotter
                 & "', bDay = '" & sBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & sContactNumber.Text & "', address = '" & sAddress.Text & "' where id = '" & id.SelectedItem & "'")
 
 
-                MessageBox.Show("Blotter Updated!")
-                Me.Hide()
-                blotterMenu.Show()
+                'MessageBox.Show("Blotter Updated!")
+                'Me.Hide()
+                'blotterMenu.Show()
+                Dim MainForm As New blotterUpdated
+                MainForm.ShowDialog()
 
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
@@ -197,7 +199,28 @@ Public Class editBlotter
         MainForm.ShowDialog()
     End Sub
 
-    Private Sub Guna2ShadowPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2ShadowPanel1.Paint
+    Private Sub cContactNumber_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cContactNumber.KeyPress
+        If (Not Char.IsControl(e.KeyChar) _
+                     AndAlso (Not Char.IsDigit(e.KeyChar) _
+                     AndAlso (e.KeyChar <> Microsoft.VisualBasic.ChrW(46)))) Then
+            e.Handled = True
+        End If
+    End Sub
 
+
+    Private Sub vContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles vContactNumber.KeyPress
+        If (Not Char.IsControl(e.KeyChar) _
+                    AndAlso (Not Char.IsDigit(e.KeyChar) _
+                    AndAlso (e.KeyChar <> Microsoft.VisualBasic.ChrW(46)))) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub sContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles sContactNumber.KeyPress
+        If (Not Char.IsControl(e.KeyChar) _
+                    AndAlso (Not Char.IsDigit(e.KeyChar) _
+                    AndAlso (e.KeyChar <> Microsoft.VisualBasic.ChrW(46)))) Then
+            e.Handled = True
+        End If
     End Sub
 End Class

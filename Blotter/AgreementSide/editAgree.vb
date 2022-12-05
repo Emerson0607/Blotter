@@ -85,9 +85,11 @@ Public Class editAgree
                 & "', victim = '" & tbVname.Text & "', suspect = '" & tbSname.Text & "', witness= '" & tbWname.Text & "', agreement =  '" & tbAgreement.Text _
                 & "', officeName = '" & tbOffice.Text & "', agreementLocation =  '" & tbLocation.Text & "' WHERE id = '" & selectedIDagree & "'")
 
-                MessageBox.Show("Agreement Record Updated!")
-                Me.Hide()
-                agreementMenu.Show()
+                'MessageBox.Show("Agreement Record Updated!")
+                'Me.Hide()
+                'agreementMenu.Show()
+                Dim MainForm As New agreeUpdated
+                MainForm.ShowDialog()
 
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)

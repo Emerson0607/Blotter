@@ -67,10 +67,6 @@ Public Class blotterMenu
         Me.Refresh()
 
     End Sub
-    Private Sub blotterMenu_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        homepage2.Show()
-
-    End Sub
 
     Private Sub id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles id.SelectedIndexChanged
         reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id where incidentBlotter.id = '" & id.SelectedItem & "'", dtg1)
@@ -85,11 +81,12 @@ Public Class blotterMenu
             delete("DELETE FROM incidentBlotter Where id = '" & id.SelectedItem & "'")
             delete("DELETE FROM victimBlotter Where id = '" & id.SelectedItem & "'")
             delete("DELETE FROM suspectBlotter Where id = '" & id.SelectedItem & "'")
-            MessageBox.Show("Deleted Successfully")
+
             Me.id.Items.Clear()
 
             reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", dtg1)
-
+            Dim MainForm As New blotterDelete
+            MainForm.ShowDialog()
 
         End If
     End Sub
@@ -145,5 +142,9 @@ Public Class blotterMenu
         Dim MainForm As New createBlotter
         MainForm.ShowDialog()
         Me.Show()
+    End Sub
+
+    Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
+
     End Sub
 End Class

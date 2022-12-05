@@ -18,11 +18,12 @@ Public Class agreementMenu
         Else
 
             delete("DELETE FROM agreement Where id = '" & id.SelectedItem & "'")
-            MessageBox.Show("Deleted Successfully")
+
             Me.id.Items.Clear()
 
             reloadAgreement("SELECT id, agreementDate, complainant, victim, suspect, witness FROM agreement where id > 0 ORDER BY id;  ", dtg1)
-
+            Dim MainForm As New agreeDelete
+            MainForm.ShowDialog()
 
         End If
     End Sub
@@ -108,6 +109,10 @@ Public Class agreementMenu
         reloadAgreement("SELECT `id`, `agreementDate`, `complainant`, `victim`, `suspect`, `witness` from agreement where id LIKE '%" & search.Text _
                         & "%' Or  agreementDate LIKE '%" & search.Text & "%' Or complainant LIKE '%" & search.Text _
                         & "%' Or  victim LIKE '%" & search.Text & "%' Or suspect LIKE '%" & search.Text & "%'  Or witness LIKE '%" & search.Text & "%'", dtg1)
+
+    End Sub
+
+    Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
 
     End Sub
 End Class

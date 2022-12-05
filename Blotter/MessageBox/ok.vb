@@ -3,6 +3,6 @@
         Me.Hide()
         Dim MainForm As New home
         MainForm.ShowDialog()
-        Me.Show()
+
     End Sub
 End Class

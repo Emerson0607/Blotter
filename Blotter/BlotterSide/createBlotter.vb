@@ -34,11 +34,13 @@
               & "','" & sFullname.Text & "','" & sCitizenship.Text & "', '" & sGender.Text & "', '" & sBday.Value.Date.ToString("yyyy/MM/dd") & "', '" & sContactNumber.Text & "', '" & sAddress.Text & "')")
 
 
-                MessageBox.Show("Completed! New Blotter Recorded")
-                Me.Hide()
-                blotterMenu.Show()
+                'MessageBox.Show("Completed! New Blotter Recorded")
+                'Me.Hide()
+                'blotterMenu.Show()
 
 
+                Dim MainForm As New added
+                MainForm.ShowDialog()
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
             Finally
@@ -82,7 +84,22 @@
         End If
     End Sub
 
-    Private Sub Guna2ShadowPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2ShadowPanel1.Paint
 
+    Private Sub vContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles vContactNumber.KeyPress
+        If (Not Char.IsControl(e.KeyChar) _
+                    AndAlso (Not Char.IsDigit(e.KeyChar) _
+                    AndAlso (e.KeyChar <> Microsoft.VisualBasic.ChrW(46)))) Then
+            e.Handled = True
+        End If
     End Sub
+
+    Private Sub sContactNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles sContactNumber.KeyPress
+        If (Not Char.IsControl(e.KeyChar) _
+                    AndAlso (Not Char.IsDigit(e.KeyChar) _
+                    AndAlso (e.KeyChar <> Microsoft.VisualBasic.ChrW(46)))) Then
+            e.Handled = True
+        End If
+    End Sub
+
+
 End Class

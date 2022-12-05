@@ -27,8 +27,10 @@ Public Class login
 
 
                 Else
+
                     Dim MainForm As New ok
                     MainForm.Show()
+
                     tbUsername.BorderColor = System.Drawing.Color.DodgerBlue
                     tbPassword.BorderColor = System.Drawing.Color.DodgerBlue
                     'MessageBox.Show("Login Success", "Welcome to SAN ISIDRO BLOTTER SYSTEM!", MessageBoxButtons.OK, MessageBoxIcon.Information)

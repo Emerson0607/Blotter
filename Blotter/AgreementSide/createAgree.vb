@@ -15,7 +15,8 @@ Public Class createAgree
 
         Try
             dbConn.Open()
-            Dim sql1 = String.Format("Select id from incidentBlotter where id > 0")
+            Dim sql1 = String.Format("Select incidentBlotter.id from incidentBlotter where id > 0")
+
 
             adapter = New MySqlDataAdapter(sql1, dbConn)
 
@@ -55,12 +56,13 @@ Public Class createAgree
                 create("INSERT INTO agreement (`id`, `agreementDate`, `agreementLocation`, `officeName`, `complainant`, `victim`, `suspect`, `witness`, `agreement`) VALUES('" & id.Text _
                   & "','" & tbDate.Value.Date.ToString("yyyy/MM/dd") & "','" & tbLocation.Text & "', '" & tbOffice.Text & "', '" & tbCname.Text & "', '" & tbVname.Text & "', '" & tbSname.Text & "',  '" & tbWname.Text & "', '" & tbAgreement.Text & "')")
 
-                MessageBox.Show("Completed! New Agreement Recorded")
-                Me.Hide()
-                agreementMenu.Show()
+                'MessageBox.Show("Completed! New Agreement Recorded")
+                'Me.Hide()
+                'agreementMenu.Show()
+                Dim MainForm As New agreeAdded
+                MainForm.ShowDialog()
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
-            Finally
 
             End Try
         End If

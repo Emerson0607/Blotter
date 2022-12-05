@@ -18,6 +18,7 @@ Module Module1
     End Function
 
 
+
     Public Sub create(ByVal sql As String)  'insert data into database
         Try
             strcon.Open()
