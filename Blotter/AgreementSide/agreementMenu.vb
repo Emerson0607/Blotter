@@ -6,10 +6,10 @@ Public Class agreementMenu
     Dim adapter As MySqlDataAdapter
     Dim ds As DataSet
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        'Me.Hide()
-        'Dim MainForm As New CreateAgree
-        'MainForm.ShowDialog()
-        'Me.Show()
+        Me.Hide()
+        Dim MainForm As New createAgree
+        MainForm.ShowDialog()
+        Me.Show()
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -31,26 +31,26 @@ Public Class agreementMenu
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         selectedIDagree = id.SelectedItem
-        'If String.IsNullOrWhiteSpace(selectedIDagree) Then
-        '    MessageBox.Show("Select ID to edit!")
-        'Else
-        '    Me.Hide()
-        '    Dim MainForm As New editAgree
-        '    MainForm.ShowDialog()
-        '    Me.Show()
-        'End If
+        If String.IsNullOrWhiteSpace(selectedIDagree) Then
+            MessageBox.Show("Select ID to edit!")
+        Else
+            Me.Hide()
+            Dim MainForm As New editAgree
+            MainForm.ShowDialog()
+            Me.Show()
+        End If
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         selectedIDagree = id.SelectedItem
-        'If String.IsNullOrWhiteSpace(selectedIDagree) Then
-        '    MessageBox.Show("Select ID to view!")
-        'Else
-        '    Me.Hide()
-        '    Dim MainForm As New viewAgree
-        '    MainForm.ShowDialog()
-        '    Me.Show()
-        'End If
+        If String.IsNullOrWhiteSpace(selectedIDagree) Then
+            MessageBox.Show("Select ID to view!")
+        Else
+            Me.Hide()
+            Dim MainForm As New viewAgree
+            MainForm.ShowDialog()
+            Me.Show()
+        End If
     End Sub
 
     Private Sub id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles id.SelectedIndexChanged
@@ -108,10 +108,6 @@ Public Class agreementMenu
         reloadAgreement("SELECT `id`, `agreementDate`, `complainant`, `victim`, `suspect`, `witness` from agreement where id LIKE '%" & search.Text _
                         & "%' Or  agreementDate LIKE '%" & search.Text & "%' Or complainant LIKE '%" & search.Text _
                         & "%' Or  victim LIKE '%" & search.Text & "%' Or suspect LIKE '%" & search.Text & "%'  Or witness LIKE '%" & search.Text & "%'", dtg1)
-
-    End Sub
-
-    Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
 
     End Sub
 End Class

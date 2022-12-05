@@ -23,13 +23,13 @@ Public Class editBlotter
                 & "', incidentDetails = '" & incidentDetails.Text & "', numberCall = '" & numberCall.Text & "' where id = '" & id.SelectedItem & "'")
 
                 updates("UPDATE complainantBlotter SET fullname = '" & cFullname.Text & "', Citizenship = '" & cCitizenship.Text & "', gender ='" & cGender.Text _
-                & "', bDay = '" & cBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & cContactNumber.Text & "', address = '" & cAddress.Text & "'")
+                & "', bDay = '" & cBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & cContactNumber.Text & "', address = '" & cAddress.Text & "' where id = '" & id.SelectedItem & "'")
 
                 updates("UPDATE victimBlotter SET fullname = '" & vFullname.Text & "', Citizenship = '" & vCitizenship.Text & "', gender ='" & vGender.Text _
-                & "', bDay = '" & vBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & vContactNumber.Text & "', address = '" & vAddress.Text & "'")
+                & "', bDay = '" & vBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & vContactNumber.Text & "', address = '" & vAddress.Text & "' where id = '" & id.SelectedItem & "'")
 
                 updates("UPDATE suspectBlotter SET fullname = '" & sFullname.Text & "', Citizenship = '" & sCitizenship.Text & "', gender ='" & sGender.Text _
-                & "', bDay = '" & sBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & sContactNumber.Text & "', address = '" & sAddress.Text & "'")
+                & "', bDay = '" & sBday.Value.Date.ToString("yyyy/MM/dd") & "', contactNumber = '" & sContactNumber.Text & "', address = '" & sAddress.Text & "' where id = '" & id.SelectedItem & "'")
 
 
                 MessageBox.Show("Blotter Updated!")
@@ -77,9 +77,7 @@ Public Class editBlotter
 
 
         '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        dbConn = New MySqlConnection
-        dbConn.ConnectionString = "server=localhost;user id=root;port=3306;database=blotter ;Persist Security Info=True;Convert Zero Datetime=True"
-
+      
         Dim READER As MySqlDataReader
         Dim Command As MySqlCommand
 
@@ -197,5 +195,9 @@ Public Class editBlotter
         Me.Hide()
         Dim MainForm As New blotterMenu
         MainForm.ShowDialog()
+    End Sub
+
+    Private Sub Guna2ShadowPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2ShadowPanel1.Paint
+
     End Sub
 End Class

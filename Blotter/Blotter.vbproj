@@ -140,6 +140,24 @@
     <Compile Include="AgreementSide\agreementMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AgreementSide\createAgree.Designer.vb">
+      <DependentUpon>createAgree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSide\createAgree.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSide\editAgree.Designer.vb">
+      <DependentUpon>editAgree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSide\editAgree.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgreementSide\viewAgree.Designer.vb">
+      <DependentUpon>viewAgree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgreementSide\viewAgree.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Authentication\login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +253,15 @@
   <ItemGroup>
     <EmbeddedResource Include="AgreementSide\agreementMenu.resx">
       <DependentUpon>agreementMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSide\createAgree.resx">
+      <DependentUpon>createAgree.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSide\editAgree.resx">
+      <DependentUpon>editAgree.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgreementSide\viewAgree.resx">
+      <DependentUpon>viewAgree.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authentication\login.resx">
       <DependentUpon>login.vb</DependentUpon>

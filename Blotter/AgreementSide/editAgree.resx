@@ -117,10 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Guna2BorderlessForm2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>727, 17</value>
+  <metadata name="Guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
+        0z0KwCAMBeA49EQeQD1Pf+zQg9TzFto+IYF2T5zyQcBkeAFRcm64kHPeUQv3qkJKqSH8QV0xxonnKr7h
+        N84rz1X8wkspG89VmIYTQg+z8M58AfRnecoSVOW5qjFLLJ+pMP1ool9XRc3cO2eO6AUgAD8rWO1qTAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="Guna2BorderlessForm2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 17</value>
+  </metadata>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAPxJREFUSEvt
@@ -131,24 +142,4 @@
         txlN8wVuQ70Wgo1oFgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAHVJREFUSEvt
-        0z0KwCAMBeA49EQeQD1Pf+zQg9TzFto+IYF2T5zyQcBkeAFRcm64kHPeUQv3qkJKqSH8QV0xxonnKr7h
-        N84rz1X8wkspG89VmIYTQg+z8M58AfRnecoSVOW5qjFLLJ+pMP1ool9XRc3cO2eO6AUgAD8rWO1qTAAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAOFJREFUaEPt
-        1kFqw0AQRFGdyziXj8m55AG9fXUWMoWZB9pVo7+cY9u27Xuc5/m3vuRl3kdgZN5HX2TeR19k3kdfZN5H
-        X2TeR19k3kdfZN5HX2TeR19k3kdfZN5HX2TeZXX9XHkjT2f3WT+ZPMw+5f8PQIc1ZM25qyFrzl0NWXPu
-        asiac1dD1py7GrLm3NWQNeeuhqy5dfO6Tiv8yrrP+snz+tfIw1kXcZF5H32ReR99kXkffZF5H32ReR99
-        kXkffZF5H32ReR99kXkffZF5H32ReZ/VNnkA3v8w27Zt+5DjeANMSrHdB5ZUjgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="Guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>938, 17</value>
-  </metadata>
 </root>

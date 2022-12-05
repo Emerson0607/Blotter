@@ -24,7 +24,6 @@ Partial Class viewBlotter
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewBlotter))
-        Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -73,7 +72,7 @@ Partial Class viewBlotter
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.cAddress = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.id = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.id = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -97,14 +96,6 @@ Partial Class viewBlotter
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Guna2BorderlessForm1
-        '
-        Me.Guna2BorderlessForm1.AnimateWindow = True
-        Me.Guna2BorderlessForm1.AnimationInterval = 350
-        Me.Guna2BorderlessForm1.ContainerControl = Me
-        Me.Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2BorderlessForm1.TransparentWhileDrag = True
         '
         'Label23
         '
@@ -865,9 +856,9 @@ Partial Class viewBlotter
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label15.Location = New System.Drawing.Point(64, 62)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(219, 39)
+        Me.Label15.Size = New System.Drawing.Size(241, 39)
         Me.Label15.TabIndex = 73
-        Me.Label15.Text = "View Record"
+        Me.Label15.Text = "Blotter Record"
         '
         'Guna2Panel4
         '
@@ -1060,32 +1051,33 @@ Partial Class viewBlotter
         '
         'id
         '
+        Me.id.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.id.BackColor = System.Drawing.Color.Transparent
         Me.id.BorderColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.id.BorderRadius = 5
-        Me.id.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.id.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.id.DefaultText = ""
+        Me.id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.id.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.id.Enabled = False
-        Me.id.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.id.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.id.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.id.ItemHeight = 30
-        Me.id.Items.AddRange(New Object() {"Alarm and Scandal", "Fatalities", "Minor Injuries", "Near Misses", "Slander", "Theft", "Unsafe Acts"})
-        Me.id.ItemsAppearance.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.id.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.id.ItemsAppearance.SelectedBackColor = System.Drawing.Color.SkyBlue
-        Me.id.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.id.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.id.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.id.Location = New System.Drawing.Point(24, 96)
-        Me.id.MaxDropDownItems = 100
+        Me.id.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.id.Name = "id"
-        Me.id.ShadowDecoration.BorderRadius = 5
+        Me.id.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.id.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.id.PlaceholderText = ""
+        Me.id.SelectedText = ""
         Me.id.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.id.ShadowDecoration.Depth = 3
         Me.id.ShadowDecoration.Enabled = True
         Me.id.Size = New System.Drawing.Size(179, 36)
-        Me.id.Sorted = True
         Me.id.TabIndex = 85
+        Me.id.WordWrap = False
         '
         'Label1
         '
@@ -1414,8 +1406,6 @@ Partial Class viewBlotter
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents Label15 As Label
     Friend WithEvents TextBox1 As TextBox
@@ -1463,7 +1453,6 @@ Partial Class viewBlotter
     Friend WithEvents cBday As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents cAddress As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents id As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -1482,4 +1471,5 @@ Partial Class viewBlotter
     Friend WithEvents btnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2BorderlessForm2 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents id As Guna.UI2.WinForms.Guna2TextBox
 End Class

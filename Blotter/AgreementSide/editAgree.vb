@@ -1,0 +1,99 @@
+﻿Imports MySql.Data.MySqlClient
+Public Class editAgree
+    Dim dbConn As MySqlConnection
+    Dim adapter As MySqlDataAdapter
+    Dim ds As DataSet
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Me.Hide()
+        Dim MainForm As New agreementMenu
+        MainForm.ShowDialog()
+    End Sub
+
+    Private Sub editAgree_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dbConn = New MySqlConnection
+        dbConn.ConnectionString = "server=localhost;user id=root;port=3306;database=blotter;Persist Security Info=True;Convert Zero Datetime=True "
+
+        Try
+            dbConn.Open()
+            Dim sql1 = String.Format("Select id from agreement where id > 0")
+
+            adapter = New MySqlDataAdapter(sql1, dbConn)
+
+            ds = New DataSet
+
+            adapter.Fill(ds, "agreement")
+            adapter.Dispose()
+
+            If ds.Tables("agreement").Rows.Count > 0 Then
+                Me.id.Items.Clear()
+                Dim i As Integer
+                For i = 0 To ds.Tables("agreement").Rows.Count - 1
+                    With Me.id
+                        .Items.Add(ds.Tables("agreement").Rows(i).Item("id"))
+                    End With
+                Next
+            Else
+                MessageBox.Show("No data")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error")
+        Finally
+            dbConn.Close()
+        End Try
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim READER As MySqlDataReader
+        Dim Command As MySqlCommand
+
+        'for incident Blotter table
+        Try
+            dbConn.Open()
+            Dim query As String
+            query = "SELECT `id`, `agreementDate`, `complainant`, `victim`, `suspect`, `witness`, `agreement`, `agreementLocation`, `officeName` from agreement where id = '" & selectedIDagree & "'"
+            Command = New MySqlCommand(query, dbConn)
+            READER = Command.ExecuteReader
+            While READER.Read
+                'read database and pass the values from field into text box
+                id.Text = READER.GetString("id")
+                tbDate.Text = READER.GetString("agreementDate")
+                tbCname.Text = READER.GetString("complainant")
+                tbVname.Text = READER.GetString("victim")
+                tbSname.Text = READER.GetString("suspect")
+                tbWname.Text = READER.GetString("witness")
+                tbAgreement.Text = READER.GetString("agreement")
+                tbOffice.Text = READER.GetString("officeName")
+                tbLocation.Text = READER.GetString("agreementLocation")
+            End While
+
+            dbConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If String.IsNullOrWhiteSpace(id.Text) Or String.IsNullOrWhiteSpace(tbDate.Value.Date) Or String.IsNullOrWhiteSpace(tbCname.Text) Or String.IsNullOrWhiteSpace(tbVname.Text) Or String.IsNullOrWhiteSpace(tbSname.Text) Or String.IsNullOrWhiteSpace(tbWname.Text) _
+    Or String.IsNullOrWhiteSpace(tbAgreement.Text) Or String.IsNullOrWhiteSpace(tbOffice.Text) Or String.IsNullOrWhiteSpace(tbLocation.Text) Then
+            MessageBox.Show("Enter complete data first!")
+        Else
+            Try
+                updates("UPDATE agreement SET agreementDate = '" & tbDate.Value.Date.ToString("yyyy/MM/dd") & "', complainant = '" & tbCname.Text _
+                & "', victim = '" & tbVname.Text & "', suspect = '" & tbSname.Text & "', witness= '" & tbWname.Text & "', agreement =  '" & tbAgreement.Text _
+                & "', officeName = '" & tbOffice.Text & "', agreementLocation =  '" & tbLocation.Text & "' WHERE id = '" & selectedIDagree & "'")
+
+                MessageBox.Show("Agreement Record Updated!")
+                Me.Hide()
+                agreementMenu.Show()
+
+            Catch ex As Exception
+                MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
+            Finally
+
+            End Try
+        End If
+    End Sub
+End Class
