@@ -5,6 +5,7 @@ Public Class agreementMenu
     Dim dbConn As MySqlConnection
     Dim adapter As MySqlDataAdapter
     Dim ds As DataSet
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Me.Hide()
         Dim MainForm As New createAgree
@@ -16,19 +17,13 @@ Public Class agreementMenu
         If String.IsNullOrWhiteSpace(id.SelectedItem) Then
             MessageBox.Show("Select ID to delete!")
         Else
-
             delete("DELETE FROM agreement Where id = '" & id.SelectedItem & "'")
-
             Me.id.Items.Clear()
-
             reloadAgreement("SELECT id, agreementDate, complainant, victim, suspect, witness FROM agreement where id > 0 ORDER BY id;  ", dtg1)
             Dim MainForm As New agreeDelete
             MainForm.ShowDialog()
-
         End If
     End Sub
-
-
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         selectedIDagree = id.SelectedItem
@@ -55,35 +50,26 @@ Public Class agreementMenu
     End Sub
 
     Private Sub id_SelectedIndexChanged(sender As Object, e As EventArgs) Handles id.SelectedIndexChanged
-        reloadAgreement("SELECT  id, agreementDate, complainant, victim, suspect, witness FROM agreement where id > 0 ORDER BY id;  ", dtg1)
-
+        reloadAgreement("SELECT  id, agreementDate, complainant, victim, suspect, witness FROM agreement where id  = '" & id.Text & "'  ORDER BY id;  ", dtg1)
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
         Dim MainForm As New home
         MainForm.ShowDialog()
-
     End Sub
 
     Private Sub agreementMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         reloadAgreement("SELECT `id`, `agreementDate`, `complainant`, `victim`, `suspect`, `witness` from agreement", dtg1)
-
         Dim dbConn = New MySqlConnection
         dbConn.ConnectionString = "server=localhost;user id=root;port=3306;database=blotter;Persist Security Info=True;Convert Zero Datetime=True "
-
         Try
             dbConn.Open()
             Dim sql1 = String.Format("Select id from agreement where id > 0")
-
             adapter = New MySqlDataAdapter(sql1, dbConn)
-
             ds = New DataSet
-
             adapter.Fill(ds, "agreement")
             adapter.Dispose()
-
             If ds.Tables("agreement").Rows.Count > 0 Then
                 Me.id.Items.Clear()
                 Dim i As Integer
@@ -100,10 +86,9 @@ Public Class agreementMenu
         Finally
             dbConn.Close()
         End Try
+        reloadAgreement("SELECT id, agreementDate, complainant, victim, suspect, witness FROM agreement where id > 0 ORDER BY id;  ", dtg1)
 
-        Me.Refresh()
     End Sub
-
 
     Private Sub search_TextChanged_1(sender As Object, e As EventArgs) Handles search.TextChanged
         reloadAgreement("SELECT `id`, `agreementDate`, `complainant`, `victim`, `suspect`, `witness` from agreement where id LIKE '%" & search.Text _
@@ -112,7 +97,4 @@ Public Class agreementMenu
 
     End Sub
 
-    Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
-
-    End Sub
 End Class
