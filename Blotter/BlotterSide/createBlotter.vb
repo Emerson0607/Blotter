@@ -39,8 +39,19 @@
                 'blotterMenu.Show()
 
 
-                Dim MainForm As New added
-                MainForm.ShowDialog()
+                'Dim MainForm As New added
+                'MainForm.ShowDialog()
+
+                Dim msg As String = "Completed! New Blotter Recorded"
+                Dim title As String = "Blotter Record"
+                Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If result = DialogResult.OK Then
+                    Me.Hide()
+
+                    Dim MainForm As New blotterMenu
+                    MainForm.ShowDialog()
+
+                End If
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
             Finally
@@ -101,5 +112,7 @@
         End If
     End Sub
 
+    Private Sub Guna2ShadowPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2ShadowPanel1.Paint
 
+    End Sub
 End Class

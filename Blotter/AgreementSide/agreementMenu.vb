@@ -20,9 +20,11 @@ Public Class agreementMenu
             delete("DELETE FROM agreement Where id = '" & id.SelectedItem & "'")
             Me.id.Items.Clear()
             reloadAgreement("SELECT id, agreementDate, complainant, victim, suspect, witness FROM agreement where id > 0 ORDER BY id;  ", dtg1)
-            Dim MainForm As New agreeDelete
-            MainForm.ShowDialog()
+            Dim msg As String = "Agreement Record Deleted"
+            Dim title As String = "Agreement Record"
+            Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
@@ -97,4 +99,7 @@ Public Class agreementMenu
 
     End Sub
 
+    Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
+
+    End Sub
 End Class

@@ -59,8 +59,22 @@ Public Class createAgree
                 'MessageBox.Show("Completed! New Agreement Recorded")
                 'Me.Hide()
                 'agreementMenu.Show()
-                Dim MainForm As New agreeAdded
-                MainForm.ShowDialog()
+                'Dim MainForm As New agreeAdded
+                'MainForm.ShowDialog()
+
+
+                Dim msg As String = "New Agreement Recorded"
+                Dim title As String = "Agreement Record"
+                Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    If result = DialogResult.OK Then
+                        Me.Hide()
+
+                    Dim MainForm As New agreementMenu
+                    MainForm.ShowDialog()
+
+                    End If
+
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)
 

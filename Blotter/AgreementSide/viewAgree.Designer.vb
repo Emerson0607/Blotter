@@ -311,9 +311,9 @@ Partial Class viewAgree
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(64, 389)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(128, 23)
+        Me.Label8.Size = New System.Drawing.Size(95, 23)
         Me.Label8.TabIndex = 120
-        Me.Label8.Text = "Incident Details"
+        Me.Label8.Text = "Agreement"
         '
         'Label7
         '
@@ -525,7 +525,6 @@ Partial Class viewAgree
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.btnBack)
-        Me.Enabled = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "viewAgree"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

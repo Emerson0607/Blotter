@@ -307,9 +307,9 @@ Partial Class editAgree
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(57, 389)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(128, 23)
+        Me.Label8.Size = New System.Drawing.Size(95, 23)
         Me.Label8.TabIndex = 120
-        Me.Label8.Text = "Incident Details"
+        Me.Label8.Text = "Agreement"
         '
         'Label7
         '

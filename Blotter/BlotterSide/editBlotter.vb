@@ -35,8 +35,19 @@ Public Class editBlotter
                 'MessageBox.Show("Blotter Updated!")
                 'Me.Hide()
                 'blotterMenu.Show()
-                Dim MainForm As New blotterUpdated
-                MainForm.ShowDialog()
+                'Dim MainForm As New blotterUpdated
+                'MainForm.ShowDialog()
+
+                Dim msg As String = "Blotter Record Updated"
+                Dim title As String = "Blotter Record"
+                Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If result = DialogResult.OK Then
+                    Me.Hide()
+
+                    Dim MainForm As New blotterMenu
+                    MainForm.ShowDialog()
+
+                End If
 
             Catch ex As Exception
                 MessageBox.Show("Error, you must complete details" & ex.Message.ToString)

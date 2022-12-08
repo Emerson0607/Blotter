@@ -58,8 +58,13 @@ Public Class blotterMenu
             delete("DELETE FROM suspectBlotter Where id = '" & id.SelectedItem & "'")
             Me.id.Items.Clear()
             reload("SELECT incidentBlotter.id, incidentBlotter.incidentType, incidentBlotter.incidentLocation, incidentBlotter.incidentDT, complainantBlotter.fullname FROM incidentBlotter INNER JOIN complainantBlotter ON incidentBlotter.id = complainantBlotter.id ORDER BY incidentBlotter.id;  ", dtg1)
-            Dim MainForm As New blotterDelete
-            MainForm.ShowDialog()
+            'Dim MainForm As New blotterDelete
+            'MainForm.ShowDialog()
+            Dim msg As String = "Blotter Record Deleted"
+            Dim title As String = "Blotter Record"
+            Dim result = MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
         End If
     End Sub
 
@@ -71,7 +76,7 @@ Public Class blotterMenu
             Me.Hide()
             Dim MainForm As New editBlotter
             MainForm.ShowDialog()
-            Me.Show()
+
         End If
     End Sub
 
@@ -83,7 +88,7 @@ Public Class blotterMenu
             Me.Hide()
             Dim MainForm As New viewBlotter
             MainForm.ShowDialog()
-            Me.Show()
+
         End If
     End Sub
 
@@ -110,7 +115,7 @@ Public Class blotterMenu
         Me.Hide()
         Dim MainForm As New createBlotter
         MainForm.ShowDialog()
-        Me.Show()
+
     End Sub
 
     Private Sub flatHome_Paint(sender As Object, e As PaintEventArgs) Handles flatHome.Paint
